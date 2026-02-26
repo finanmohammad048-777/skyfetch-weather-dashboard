@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+
 }
 
 .container {
@@ -83,4 +84,76 @@ h1 {
 .weather-icon {
     width: 100px;
     height: 100px;
+}
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+#city-input {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+    outline: none;
+    width: 70%;
+    flex: 1;
+}
+#search-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all;
+    opacity: 0.9;
+}
+.error-message {
+    background-color: #ffe5e5;   /* light red/pink background */
+    color: #b00020;             /* dark red text */
+    padding: 12px 16px;         /* spacing inside the box */
+    border-radius: 6px;         /* rounded corners */
+    border-left: 6px solid #b00020; /* thick red border on the left */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;                   /* space between icon and text */
+}
+
+/* Optional: style for the emoji/icon */
+.error-message::before {
+    content: "⚠️";              /* or ❌ */
+    font-size: 18px;
+}
+/* Spinner styling */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;       /* light gray background border */
+    border-top: 5px solid #667eea;   /* accent color (purple/blue) */
+    border-radius: 50%;              /* makes it circular */
+    animation: spin 1s linear infinite; /* continuous rotation */
+}
+
+/* Spin animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Loading container styling */
+.loading-container {
+    display: flex;
+    flex-direction: column;          /* stack spinner and text vertically */
+    align-items: center;             /* center horizontally */
+    justify-content: center;         /* center vertically */
+    gap: 10px;                       /* space between spinner and text */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
 }
